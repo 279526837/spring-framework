@@ -6,7 +6,8 @@ pluginManagement {
 }
 
 include "spring-aop"
-include "spring-aspects"
+// fixme IDEA编译报错，注释掉
+//include "spring-aspects"
 include "spring-beans"
 include "spring-context"
 include "spring-context-support"
@@ -31,7 +32,12 @@ include "spring-websocket"
 include "framework-bom"
 include "integration-tests"
 
+//fixme 自己加的测试项目
+include 'spring-study'
+
+
 rootProject.name = "spring"
 rootProject.children.each {project ->
 	project.buildFileName = "${project.name}.gradle"
 }
+
